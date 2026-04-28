@@ -1,0 +1,36 @@
+create database ecommerce;
+use ecommerce;
+CREATE TABLE users(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(50),
+email VARCHAR(50),
+password VARCHAR(50)
+);
+CREATE TABLE products(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100),
+price DOUBLE,
+description VARCHAR(200),
+image VARCHAR(200)
+);
+CREATE TABLE cart(
+id INT AUTO_INCREMENT PRIMARY KEY,
+product_id INT,
+quantity INT
+);
+INSERT INTO products(name,price,description) VALUES
+('Laptop',50000,'Gaming Laptop'),
+('Phone',20000,'Android Phone'),
+('Headphones',3000,'Bluetooth Headphones');
+use ecommerce;
+show tables;
+truncate table products;
+select * from users;
+select * from prodcuts;
+truncate table products;
+INSERT INTO products(name, price, description, image) VALUES
+('Laptop', 50000, 'Gaming Laptop', 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8'),
+('Phone', 20000, 'Android Phone', 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9'),
+('Headphones', 3000, 'Bluetooth Headphones', 'https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D');
+select * from products
+
